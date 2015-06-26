@@ -41,4 +41,19 @@ describe "Static pages" do
     end
   end
 
+  # 演習3.5 のテストコード
+
+  describe "Contact page" do
+
+    it "should have the content 'Contact'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('contact')
+    end
+
+    it "should have the content 'Contact'" do
+      visit '/static_pages/contact'
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact")
+    end
+  end
+
 end
